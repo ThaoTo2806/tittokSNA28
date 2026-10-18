@@ -1,0 +1,32 @@
+{
+  "raw_csv_count": 46,
+  "expected_raw_csv_count": null,
+  "raw_read_errors": [],
+  "exact_duplicate_file_groups": [],
+  "files_to_review": [],
+  "manifest_comparison": {
+    "manifest_found": false,
+    "missing_expected_files": [],
+    "unexpected_files": []
+  },
+  "duplicate_quality_summary": {
+    "duplicate_records_file_exists": true,
+    "duplicate_rows_in_report": 168,
+    "quality_report_exists": true,
+    "quality_columns_reported": 1032
+  },
+  "hashtag_stats_rows": 24880,
+  "suspicious_hashtag_count": 5,
+  "zero_hashtag_audit": {
+    "cleaned_data_exists": true,
+    "cleaned_rows": 21102,
+    "stored_zero_hashtag_rows": 904,
+    "zero_rows_with_structured_hashtag_values": 0,
+    "zero_rows_with_caption_hashtag_pattern": 0,
+    "zero_rows_recovered_by_recheck": 0,
+    "hashtag_structured_columns_found": 150,
+    "text_column_found": true,
+    "note": "Đây là kiểm chứng trên cột gốc còn lưu trong cleaned_data.csv; nếu không có cột gốc thì cần đối chiếu raw CSV theo source_file/id."
+  },
+  "audit_output_dir": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\audit"
+}

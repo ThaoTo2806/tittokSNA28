@@ -1,0 +1,12 @@
+--Giai đoạn 1
+Bước 1 — Cài thư viện
+py -m pip install pandas
+Bước 2 — Chạy script
+py clean_tiktok_data.py
+Bước 3 — Chạy script (xác định node, edge và mối quan hệ giữa chúng trước)
+py build_hashtag_network.py  (thay build_hashtag_network_fixed.py)
+Bước 4 - Chạy finalize_stage1.py
+py -m pip install scipy numpy
+py finalize_stage1.py
+Bước 5 - Chạy finalize_stage1_diagnostic.py
+py finalize_stage1_diagnostic.py (finalize_stage1_diagnostic_fixed.py)

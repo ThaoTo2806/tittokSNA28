@@ -1,0 +1,20 @@
+{
+  "input_file": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\cleaned_data.csv",
+  "output_directory": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network",
+  "input_video_rows": 21102,
+  "videos_with_at_least_one_hashtag": 20198,
+  "videos_without_hashtags": 904,
+  "videos_with_exactly_one_hashtag": 812,
+  "unique_nodes": 24869,
+  "unique_edges_before_weight_filter": 213266,
+  "unique_edges_after_weight_filter": 213266,
+  "min_edge_weight": 1,
+  "total_video_hashtag_mentions": 108636,
+  "max_unique_hashtags_in_one_video": 149,
+  "network_type": "undirected weighted co-occurrence network",
+  "node_definition": "one normalized hashtag",
+  "hashtag_normalization": "lowercase; trim edge punctuation; preserve Unicode letters, combining marks and symbols/emoji; reject whitespace/control characters and embedded # or |",
+  "edge_definition": "two distinct hashtags co-occur in the same video",
+  "edge_weight_definition": "number of videos in which the hashtag pair co-occurs",
+  "interpretation_note": "A video with k distinct hashtags contributes k*(k-1)/2 pairwise co-occurrence counts."
+}

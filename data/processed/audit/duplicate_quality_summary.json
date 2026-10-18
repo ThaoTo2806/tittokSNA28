@@ -1,0 +1,218 @@
+{
+  "duplicate_records_file_exists": true,
+  "duplicate_rows_in_report": 168,
+  "quality_report_exists": true,
+  "quality_columns_reported": 1032,
+  "top_missing_columns": [
+    {
+      "column": "authorMeta/bioLink",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "authorMeta/createTime",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "authorMeta/followDatasetUrl",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "commentsDatasetUrl",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/0/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/0/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/0/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/1/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/1/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/1/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/2/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/2/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/2/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/3/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/3/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/3/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/4/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/4/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/4/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/5/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/5/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/5/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/6/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/6/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/6/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/7/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/7/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/7/title",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/8/cover",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    },
+    {
+      "column": "hashtags/8/id",
+      "dtype": "float64",
+      "missing_count": 21102,
+      "missing_percent": 100.0,
+      "unique_non_null": 0
+    }
+  ]
+}

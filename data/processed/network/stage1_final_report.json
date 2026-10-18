@@ -1,0 +1,69 @@
+{
+  "generated_at_utc": "2026-10-18T16:25:33.814070+00:00",
+  "project_dir": "D:\\HOCTAP\\abc\\tittokSNA28",
+  "input_files": {
+    "cleaned_data_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\cleaned_data.csv",
+    "nodes_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\nodes.csv",
+    "edges_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\edges.csv",
+    "network_summary_json": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\network_summary.json"
+  },
+  "outputs": {
+    "adjacency_matrix_npz": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\adjacency_matrix.npz",
+    "node_index_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\node_index.csv",
+    "validation_report_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\stage1_validation_report.csv",
+    "hashtags_missing_from_nodes_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\hashtags_missing_from_nodes.csv",
+    "nodes_extra_not_in_cleaned_data_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\nodes_extra_not_in_cleaned_data.csv",
+    "video_hashtag_count_discrepancies_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\video_hashtag_count_discrepancies.csv"
+  },
+  "data_counts": {
+    "cleaned_video_rows": 21102,
+    "videos_without_hashtags_recomputed": 904,
+    "videos_with_hashtags_recomputed": 20198,
+    "unique_hashtags_recomputed_from_cleaned_data": 24869,
+    "nodes_csv_rows": 24869,
+    "unique_node_ids": 24869,
+    "duplicate_node_id_rows": 0,
+    "hashtags_in_cleaned_missing_from_nodes_count": 0,
+    "hashtags_in_nodes_not_in_cleaned_count": 0,
+    "examples_hashtags_missing_from_nodes": [],
+    "examples_extra_nodes_not_in_cleaned": [],
+    "videos_without_hashtags_using_network_builder_rules": 904,
+    "video_zero_hashtag_count_difference_builder_minus_audit": 0,
+    "videos_with_different_zero_vs_nonzero_hashtag_status": 0,
+    "diagnostic_files": {
+      "hashtags_missing_from_nodes_csv": "hashtags_missing_from_nodes.csv",
+      "nodes_extra_not_in_cleaned_data_csv": "nodes_extra_not_in_cleaned_data.csv",
+      "video_hashtag_count_discrepancies_csv": "video_hashtag_count_discrepancies.csv"
+    }
+  },
+  "edge_validation": {
+    "edges_csv_rows": 213266,
+    "duplicate_undirected_edge_rows_after_first_occurrence": 0,
+    "self_loop_rows": 0,
+    "invalid_weight_rows": 0,
+    "rows_with_missing_node_endpoint": 0,
+    "rows_with_empty_endpoint": 0,
+    "unique_valid_undirected_pairs": 213266,
+    "valid_undirected_edge_weight_sum": 454372
+  },
+  "adjacency_matrix": {
+    "format": "SciPy CSR sparse matrix saved as compressed NPZ",
+    "shape": [
+      24869,
+      24869
+    ],
+    "nonzero_entries": 426532,
+    "undirected_edge_count": 213266,
+    "is_symmetric": true,
+    "diagonal_is_zero": true,
+    "dtype": "int64",
+    "interpretation": "A[i,j] is the aggregated co-occurrence weight between node_index[i] and node_index[j]. Matrix is symmetric."
+  },
+  "validation": {
+    "pass_count": 17,
+    "warn_count": 0,
+    "fail_count": 0,
+    "overall_status": "PASS",
+    "note": "WARN indicates discrepancy or duplicate rows needing review; inspect stage1_validation_report.csv before claiming Stage 1 is finalized."
+  }
+}

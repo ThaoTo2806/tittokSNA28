@@ -1,0 +1,20 @@
+﻿check,status,observed,expected,details
+cleaned_data_readable,PASS,21102,,D:\HOCTAP\abc\tittokSNA28\data\processed\cleaned_data.csv
+nodes_readable,PASS,24869,,D:\HOCTAP\abc\tittokSNA28\data\processed\network\nodes.csv
+edges_readable,PASS,213266,,D:\HOCTAP\abc\tittokSNA28\data\processed\network\edges.csv
+node_ids_unique,PASS,24869,24869,duplicate_node_ids=0
+unique_hashtags_clean_vs_nodes,PASS,24869,24869,missing_from_nodes=0; extra_in_nodes=0
+zero_hashtag_video_count,INFO,904,,Recomputed from cleaned_data.csv column hashtags_clean; compare with network_summary.json.
+zero_hashtag_video_count_using_network_builder_rules,INFO,904,904,Difference vs audit parser=0; see video_hashtag_count_discrepancies.csv.
+duplicate_undirected_edges,PASS,0,0,"Counts repeated unordered hashtag pairs, including reversed source/target rows."
+self_loop_edges,PASS,0,0,
+invalid_edge_weights,PASS,0,0,"Weight must be finite, positive, and an integer."
+edges_with_missing_node_endpoint,PASS,0,0,
+edges_with_empty_endpoint,PASS,0,0,
+adjacency_matrix_symmetric,PASS,True,True,
+adjacency_matrix_diagonal_zero,PASS,True,True,
+adjacency_matrix_saved_as_sparse,PASS,CSR .npz,,Avoids allocating a dense N x N matrix.
+network_summary_json_readable,PASS,,,
+summary_input_video_rows_vs_cleaned,PASS,21102,21102,WARN means the existing summary and recomputed data disagree.
+summary_unique_nodes_vs_nodes_csv,PASS,24869,24869,WARN means the existing summary and recomputed data disagree.
+summary_videos_without_hashtags_vs_cleaned,PASS,904,904,WARN means the existing summary and recomputed data disagree.

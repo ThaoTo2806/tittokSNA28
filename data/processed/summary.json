@@ -1,0 +1,11 @@
+{
+  "csv_files_found": 46,
+  "csv_files_read_successfully": 46,
+  "rows_before_deduplication": 21270,
+  "duplicate_rows_removed": 168,
+  "rows_after_deduplication": 21102,
+  "unique_video_ids": 21102,
+  "unique_hashtags": 24880,
+  "rows_with_zero_hashtags": 904,
+  "output_directory": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed"
+}

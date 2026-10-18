@@ -1,0 +1,11 @@
+{
+  "cleaned_data_exists": true,
+  "cleaned_rows": 21102,
+  "stored_zero_hashtag_rows": 904,
+  "zero_rows_with_structured_hashtag_values": 0,
+  "zero_rows_with_caption_hashtag_pattern": 0,
+  "zero_rows_recovered_by_recheck": 0,
+  "hashtag_structured_columns_found": 150,
+  "text_column_found": true,
+  "note": "Đây là kiểm chứng trên cột gốc còn lưu trong cleaned_data.csv; nếu không có cột gốc thì cần đối chiếu raw CSV theo source_file/id."
+}
