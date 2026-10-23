@@ -11,3 +11,6 @@ py finalize_stage1_diagnostic_fixed.py
 Bước 5 - Chạy bằng chứng chênh lệch hashtag
 py evidence_hashtag_gap.py
 (Các bản cũ nằm trong thư mục old/)
+
+--Giai đoạn 2
+py compute_centrality.py

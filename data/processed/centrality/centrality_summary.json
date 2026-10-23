@@ -1,0 +1,77 @@
+{
+  "n_nodes": 24869,
+  "n_edges": 213266,
+  "n_components": 436,
+  "lcc_size": 23471,
+  "lcc_fraction": 0.9437854356829788,
+  "n_isolated_nodes": 120,
+  "second_largest_component": 30,
+  "diameter_all_components": 8,
+  "avg_path_length_reachable_pairs": 3.0935382670198037,
+  "diameter_lcc": 8,
+  "radius_lcc": 4,
+  "avg_path_length_lcc": 3.0935555733982216,
+  "betweenness_sum_check": {
+    "sum_betweenness": 576633542.9999999,
+    "sum_over_pairs_of_(d-1)": 576633543.0,
+    "relative_diff": 2.0673318609004549e-16
+  },
+  "path_length_distribution_ordered_pairs": {
+    "1": 426532,
+    "2": 81757348,
+    "3": 344812694,
+    "4": 114204944,
+    "5": 9088486,
+    "6": 563790,
+    "7": 15684,
+    "8": 360
+  },
+  "lambda_1": 183.3716545373508,
+  "lambda_k": {
+    "k": 100,
+    "value": 20.829711303352436
+  },
+  "subgraph_truncation_check": {
+    "k_used": 100,
+    "k_half": 50,
+    "max_abs_diff_of_ln_between_k_and_k_half": 0.0
+  },
+  "subgraph_lcc_method": "top-100 eigenpairs",
+  "alpha": 0.002726702778908261,
+  "alpha_times_lambda_1": 0.5,
+  "information_trace_Lplus": 5266.4158083661405,
+  "pagerank_damping": 0.85,
+  "average_clustering_all_nodes": 0.863670792724522,
+  "average_clustering_deg_ge_2": 0.8835669482194305,
+  "transitivity": 0.10901121327075144,
+  "n_triangles": 2589721,
+  "density": 0.0006896876321647162,
+  "degree_mean": 17.151152036672162,
+  "degree_median": 6.0,
+  "degree_max": 5328,
+  "kshell_max": 148,
+  "neighborhood_centrality_params": {
+    "radius": 2,
+    "p": 0.5
+  },
+  "compute_seconds": 498.4,
+  "parameters": {
+    "workers": 6,
+    "batch": 64,
+    "alpha_factor": 0.5,
+    "damping": 0.85,
+    "nc_radius": 2,
+    "nc_p": 0.5,
+    "subgraph_k": 100,
+    "skip_information": false,
+    "self_test": false
+  },
+  "notes": [
+    "17 do do tinh tren do thi vo huong khong trong so; strength/pagerank_weighted dung trong so.",
+    "Closeness, Eccentricity, Information chi tinh tren LCC (NaN ngoai LCC).",
+    "Eigenvector/HITS: hub = authority (vo huong); node ngoai LCC = 0.",
+    "Subgraph tren LCC la xap xi top-K cap rieng; xem subgraph_truncation_check.",
+    "Betweenness/Stress: moi cap vo huong dem 1 lan (da chia 2)."
+  ],
+  "total_seconds": 499.5
+}
