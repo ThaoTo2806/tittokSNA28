@@ -1,6 +1,6 @@
 {
-  "input_file": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\cleaned_data.csv",
-  "output_directory": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network",
+  "input_file": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\cleaned_data.csv",
+  "output_directory": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network",
   "input_video_rows": 21102,
   "videos_with_at_least_one_hashtag": 20198,
   "videos_without_hashtags": 904,

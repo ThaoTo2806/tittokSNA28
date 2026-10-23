@@ -11,18 +11,19 @@ Giai đoạn 1 xây dựng và kiểm định mạng đồng xuất hiện hasht
 
 ## 2. Quy trình đã thực hiện
 
+0. **Thu thập dữ liệu (crawl)** bằng Apify: 46 file CSV (`data/raw/dataset_*.csv`) được tải về từ các lần chạy trên Apify, mỗi file ứng với một hashtag/chủ đề nguồn. Tổng 21,270 dòng trước khử trùng; sau khi loại 168 bản trùng còn 21,102 video (≥ 20,000 theo yêu cầu).
 1. **Audit dữ liệu đầu vào** bằng `audit_tiktok_data.py` để kiểm tra dữ liệu TikTok và xác định các vấn đề cần xử lý.
 2. **Làm sạch dữ liệu** bằng `clean_tiktok_data.py`:
    - Chuẩn hóa/làm sạch hashtag từ các cột hashtag và caption theo logic của script.
    - Tạo cột `hashtags_clean` chứa hashtag phân tách bằng dấu `|`.
    - Tạo/chuẩn hóa `hashtag_count`.
    - Loại video trùng lặp.
-3. **Dựng mạng hashtag** bằng phiên bản đã sửa `build_hashtag_network.py`:
+3. **Dựng mạng hashtag** bằng `build_hashtag_network_fixed.py`:
    - Chuẩn hóa Unicode NFC và chữ thường.
    - Giữ lại hashtag có chữ/số Unicode, emoji và ký hiệu hợp lệ; loại giá trị rỗng, có khoảng trắng, chứa `#` bên trong, ký tự điều khiển/ surrogate, hoặc dài hơn 100 ký tự.
    - Đếm tần suất hashtag theo video.
    - Tạo cạnh vô hướng theo các cặp hashtag cùng xuất hiện trong một video và tính trọng số cạnh.
-4. **Kiểm định và hoàn tất Stage 1** bằng `finalize_stage1_diagnostic_fixed.py`:
+4. **Kiểm định và hoàn tất Stage 1** bằng `finalize_stage1_diagnostic_fixed.py` (quy tắc chuẩn hóa giống bộ dựng mạng):
    - Dùng cùng quy tắc chuẩn hóa với bộ dựng mạng.
    - Đối chiếu hashtag duy nhất với node trong `nodes.csv`.
    - Kiểm tra node ID trùng, cạnh vô hướng trùng, self-loop, trọng số cạnh, endpoint không tồn tại.
@@ -47,6 +48,8 @@ Giai đoạn 1 xây dựng và kiểm định mạng đồng xuất hiện hasht
 
 `nnz = 426,532` bằng hai lần số cạnh vô hướng (`2 × 213,266`) vì mỗi cạnh được lưu ở cả vị trí `(i, j)` và `(j, i)` trong ma trận kề đối xứng.
 
+**Giải thích chênh lệch 24,880 (clean) so với 24,869 (node):** `clean_tiktok_data.py` chỉ chuẩn hóa nhẹ nên `summary.json` ghi 24,880 hashtag. Bộ dựng mạng chuẩn hóa chặt hơn: 24,880 − 4 (bị loại: `*`, `@`, `｡`, một chuỗi quá dài/ký tự không hợp lệ) − 7 (bị gộp về cùng node, ví dụ `fyp*` → `fyp`, `tiktokcongnghe”` → `tiktokcongnghe`, `_trending` → `trending`) = 24,869. Chi tiết và kiểm chứng: `evidence_hashtag_gap.py` → `data/processed/network/hashtag_gap_evidence.csv`, `hashtag_gap_summary.json`.
+
 ## 4. File đầu vào chính
 
 - `data/processed/cleaned_data.csv` — dữ liệu đã làm sạch, được sử dụng để xây dựng mạng.
@@ -57,9 +60,10 @@ Giai đoạn 1 xây dựng và kiểm định mạng đồng xuất hiện hasht
 |---|---|
 | `audit_tiktok_data.py` | Audit dữ liệu đầu vào |
 | `clean_tiktok_data.py` | Làm sạch dữ liệu và hashtag |
-| `build_hashtag_network.py` | Dựng node, edge, mapping, GraphML và summary |
+| `build_hashtag_network_fixed.py` | Dựng node, edge, mapping, GraphML và summary |
 | `finalize_stage1_diagnostic_fixed.py` | Kiểm định nhất quán và tạo ma trận kề/báo cáo |
-| `finalize_stage1.py` | Phiên bản hoàn tất/kiểm định trước đó; giữ lại để tham khảo, cần ưu tiên bản diagnostic đã sửa khi chạy lại kiểm định |
+| `evidence_hashtag_gap.py` | Chứng minh chênh lệch 24,880 → 24,869 hashtag |
+| `old/` | Bản cũ không dùng: `build_hashtag_network.py`, `finalize_stage1.py`, `finalize_stage1_diagnostic.py` (quy tắc chuẩn hóa cũ, không khớp dữ liệu hiện tại) |
 
 ## 6. File đầu ra Stage 1
 
@@ -69,7 +73,8 @@ Các file được lưu trong `data/processed/network/`.
 |---|---|
 | `nodes.csv` | Danh sách node; gồm ID hashtag và tần suất xuất hiện theo video |
 | `edges.csv` | Danh sách cặp hashtag và trọng số đồng xuất hiện |
-| `video_hashtag_mapping.csv` | Mapping video với danh sách hashtag đã chuẩn hóa và số hashtag |
+| `video_hashtag_mapping.csv` | Mapping video với danh sách hashtag đã chuẩn hóa và số hashtag (20,198 dòng = số video có hashtag) |
+| `hashtag_gap_evidence.csv`, `hashtag_gap_summary.json` | Bằng chứng chênh lệch 24,880 → 24,869 |
 | `hashtag_network.graphml` | Mạng dạng GraphML, có thể nhập vào Gephi |
 | `network_summary.json` | Thống kê tổng quan và định nghĩa mạng |
 | `adjacency_matrix.npz` | Ma trận kề sparse định dạng CSR |
@@ -87,11 +92,14 @@ Chạy các lệnh từ thư mục gốc dự án, nơi có thư mục `data/`:
 ```powershell
 py audit_tiktok_data.py
 py clean_tiktok_data.py
-py build_hashtag_network.py
+py build_hashtag_network_fixed.py
 py finalize_stage1_diagnostic_fixed.py
+py evidence_hashtag_gap.py
 ```
 
-**Lưu ý:** Chỉ chạy lại audit/clean nếu cần tái tạo dữ liệu sạch. Nếu `cleaned_data.csv` không thay đổi và chỉ cần dựng lại mạng, chạy từ bước `build_hashtag_network.py`. Sau khi thay đổi quy tắc chuẩn hóa hoặc dữ liệu, luôn chạy lại cả bước dựng mạng và kiểm định để các file đầu ra đồng bộ.
+Thư viện cần: `py -m pip install pandas scipy numpy`. Lưu ý `clean_tiktok_data.py` đặt cứng `PROJECT_DIR`; sửa lại cho đúng máy trước khi chạy.
+
+**Lưu ý:** Chỉ chạy lại audit/clean nếu cần tái tạo dữ liệu sạch. Nếu `cleaned_data.csv` không thay đổi và chỉ cần dựng lại mạng, chạy từ bước `build_hashtag_network_fixed.py`. Sau khi thay đổi quy tắc chuẩn hóa hoặc dữ liệu, luôn chạy lại cả bước dựng mạng và kiểm định để các file đầu ra đồng bộ.
 
 ## 8. Tiêu chí hoàn tất Stage 1
 

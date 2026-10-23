@@ -1,0 +1,11 @@
+{
+  "unique_hashtags_in_cleaned_data_recomputed": 24880,
+  "unique_hashtags_in_summary_json": 24880,
+  "dropped_hashtags": 4,
+  "merged_forms_lost": 7,
+  "expected_nodes": 24869,
+  "nodes_csv_rows": 24869,
+  "normalized_set_equals_nodes_csv": true,
+  "equation": "24880 - 4 (dropped) - 7 (merged) = 24869",
+  "check_pass": true
+}

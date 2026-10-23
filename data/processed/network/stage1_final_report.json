@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-10-18T16:25:33.814070+00:00",
-  "project_dir": "D:\\HOCTAP\\abc\\tittokSNA28",
+  "generated_at_utc": "2026-10-23T07:21:00.346781+00:00",
+  "project_dir": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28",
   "input_files": {
-    "cleaned_data_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\cleaned_data.csv",
-    "nodes_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\nodes.csv",
-    "edges_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\edges.csv",
-    "network_summary_json": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\network_summary.json"
+    "cleaned_data_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\cleaned_data.csv",
+    "nodes_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\nodes.csv",
+    "edges_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\edges.csv",
+    "network_summary_json": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\network_summary.json"
   },
   "outputs": {
-    "adjacency_matrix_npz": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\adjacency_matrix.npz",
-    "node_index_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\node_index.csv",
-    "validation_report_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\stage1_validation_report.csv",
-    "hashtags_missing_from_nodes_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\hashtags_missing_from_nodes.csv",
-    "nodes_extra_not_in_cleaned_data_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\nodes_extra_not_in_cleaned_data.csv",
-    "video_hashtag_count_discrepancies_csv": "D:\\HOCTAP\\abc\\tittokSNA28\\data\\processed\\network\\video_hashtag_count_discrepancies.csv"
+    "adjacency_matrix_npz": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\adjacency_matrix.npz",
+    "node_index_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\node_index.csv",
+    "validation_report_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\stage1_validation_report.csv",
+    "hashtags_missing_from_nodes_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\hashtags_missing_from_nodes.csv",
+    "nodes_extra_not_in_cleaned_data_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\nodes_extra_not_in_cleaned_data.csv",
+    "video_hashtag_count_discrepancies_csv": "C:\\Users\\tnguyen802\\OneDrive - DXC Production\\research\\tittokSNA28\\data\\processed\\network\\video_hashtag_count_discrepancies.csv"
   },
   "data_counts": {
     "cleaned_video_rows": 21102,

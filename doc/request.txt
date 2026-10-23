@@ -1,0 +1,9 @@
+1. Crawl (cáo, thu thập dữ liệu) từ source, >=20k records -> xử lí data (làm sạch, tình chính, chuẩn hóa data...)
+ 
+2. Áp dụng các kiến thức học trong môn SNA, tính toán các độ đo centrality (Betweeness, CC, Degree Distribution, Eigen vector, density, path length, diameter, HITS, modularity, clustering coefficient..)
+ 
+3. Chọn thuật toán để áp dụng vào bộ dữ liệu mà mình thu thập
+ 
+4. Virsualize/Trực quan, mô phỏng -> Gephi, NetworkX, iGraph, Python, R, Matlab Pajek....
+ 
+5. Xây dựng ứng dụng minh họa

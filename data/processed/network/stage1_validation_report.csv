@@ -1,7 +1,7 @@
 ﻿check,status,observed,expected,details
-cleaned_data_readable,PASS,21102,,D:\HOCTAP\abc\tittokSNA28\data\processed\cleaned_data.csv
-nodes_readable,PASS,24869,,D:\HOCTAP\abc\tittokSNA28\data\processed\network\nodes.csv
-edges_readable,PASS,213266,,D:\HOCTAP\abc\tittokSNA28\data\processed\network\edges.csv
+cleaned_data_readable,PASS,21102,,C:\Users\tnguyen802\OneDrive - DXC Production\research\tittokSNA28\data\processed\cleaned_data.csv
+nodes_readable,PASS,24869,,C:\Users\tnguyen802\OneDrive - DXC Production\research\tittokSNA28\data\processed\network\nodes.csv
+edges_readable,PASS,213266,,C:\Users\tnguyen802\OneDrive - DXC Production\research\tittokSNA28\data\processed\network\edges.csv
 node_ids_unique,PASS,24869,24869,duplicate_node_ids=0
 unique_hashtags_clean_vs_nodes,PASS,24869,24869,missing_from_nodes=0; extra_in_nodes=0
 zero_hashtag_video_count,INFO,904,,Recomputed from cleaned_data.csv column hashtags_clean; compare with network_summary.json.

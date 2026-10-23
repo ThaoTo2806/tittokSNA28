@@ -4,9 +4,10 @@ py -m pip install pandas
 Bước 2 — Chạy script
 py clean_tiktok_data.py
 Bước 3 — Chạy script (xác định node, edge và mối quan hệ giữa chúng trước)
-py build_hashtag_network.py  (thay build_hashtag_network_fixed.py)
-Bước 4 - Chạy finalize_stage1.py
+py build_hashtag_network_fixed.py
+Bước 4 - Cài thư viện và chạy kiểm định
 py -m pip install scipy numpy
-py finalize_stage1.py
-Bước 5 - Chạy finalize_stage1_diagnostic.py
-py finalize_stage1_diagnostic.py (finalize_stage1_diagnostic_fixed.py)
+py finalize_stage1_diagnostic_fixed.py
+Bước 5 - Chạy bằng chứng chênh lệch hashtag
+py evidence_hashtag_gap.py
+(Các bản cũ nằm trong thư mục old/)
