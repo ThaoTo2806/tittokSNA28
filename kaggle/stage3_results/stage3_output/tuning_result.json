@@ -1,0 +1,14 @@
+{
+  "gamma": 1.0,
+  "omega": 5.0,
+  "train_snapshots": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07"
+  ],
+  "criterion": "score = 0.5 * (mean modularity_t + mean predictive_modularity_{t->t+1}) tren train"
+}

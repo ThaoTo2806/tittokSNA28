@@ -1,0 +1,59 @@
+{
+  "mode": "run",
+  "input": "/kaggle/working/tittokSNA28/data/processed/temporal/video_hashtag_time.csv",
+  "output": "/kaggle/working/stage3_output",
+  "freq": "M",
+  "start": "2026-01-01",
+  "end": null,
+  "max_videos": 0,
+  "sample_seed": 42,
+  "weighting": "count",
+  "train_frac": 0.7,
+  "seeds": 5,
+  "gamma": null,
+  "omega": null,
+  "gammas": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "omegas": [
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "min_size": 5,
+  "theta": 0.3,
+  "min_overlap": 2,
+  "delta": 0.25,
+  "patience": 1,
+  "match": "persistent",
+  "replicates": 5,
+  "syn_p_in": 0.3,
+  "syn_p_out": 0.005,
+  "syn_presence": 0.9,
+  "syn_omega": 1.0,
+  "gamma_used": 1.0,
+  "omega_used": 5.0,
+  "snapshots": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "split_idx": 7,
+  "versions": {
+    "igraph": "1.0.0",
+    "leidenalg": "0.12.0",
+    "pandas": "2.3.3"
+  }
+}
